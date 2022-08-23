@@ -1,12 +1,12 @@
 const Exhibits = ({ onClick, exhibits }) => {
-   console.log(exhibits)
    return (
       <div>
          {exhibits.map(exhibit => (
-            <div onClick={onClick} id={exhibit.id}>
+            <div key={exhibit.id} >
                   <span>{exhibit.name}</span>
                   <span>{exhibit.location}</span>
                   <span>{exhibit.theme}</span>
+                  <button onClick={onClick} id={exhibit.id}>[Open exhibit arts]</button>
             </div>
          ))}
       </div>

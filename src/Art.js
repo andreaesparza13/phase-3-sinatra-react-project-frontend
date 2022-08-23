@@ -1,10 +1,16 @@
 const Art = ({ title, medium, description, image_url }) => {
     return (
-        <div className="w-16 h-32 bg-blue-500 border-2 border-black">
-            <span>{title}</span>
-            <span>{medium}</span>
-            <span>{description}</span>
-            <span>{image_url}</span>
+        <div className="p-2 m-auto w-64 h-xl bg-blue-500 border-2 border-black">
+            <ul>
+                <span>[Click to view Artist]</span>
+                <li>{title}</li>
+                <br/>
+                <li>{medium}</li>
+                <br/>
+                <li>{description}</li>
+                <br/>
+            </ul>
+            <img src={image_url} alt="art photo"/>
         </div>
     )
 }
