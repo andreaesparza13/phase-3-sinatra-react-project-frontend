@@ -15,3 +15,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+@layer components {
+  .navButton {
+    @apply  w-24 bg-stone-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded mt-2;
+  }
+}
