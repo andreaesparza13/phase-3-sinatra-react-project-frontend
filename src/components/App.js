@@ -22,18 +22,20 @@ function App() {
       setArts(arts)
       setShowArts(true)})
   };
-
-  
   
   return (
     <div className="App">
       <Header />
-      {exhibits?.length ? (
-        <Exhibits exhibits={exhibits} onClick={onExhibitClick}/>
-      ) : (
-        "Loading..."
-      )}
-      {showArts ? <ArtList arts={arts} /> : "Nothing to show"}
+        <Route path="/exhibits">
+        {exhibits?.length ? (
+          <Exhibits exhibits={exhibits} onClick={onExhibitClick}/>
+        ) : (
+          "Loading..."
+        )}
+        </Route>
+        <Route path="/Art">
+        {showArts ? <ArtList arts={arts} /> : "Nothing to show"}
+        </Route>
     </div>
   );
 }
