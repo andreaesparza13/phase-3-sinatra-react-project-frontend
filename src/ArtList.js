@@ -2,7 +2,9 @@ import React from 'react'
 import Art from './Art'
 
 export const ArtList = ({arts}) => {
-  console.log('arts: ', arts);
+  if(!arts){
+    return <div>Loading...</div>
+  }
   return (
     <div>
       {arts.map(art => (

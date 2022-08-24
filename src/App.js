@@ -1,8 +1,7 @@
-import Header from "./Header";
 import Exhibits from "./Exhibits";
 import ArtList from "./ArtList";
 import { useEffect, useState } from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 function App() {
   const [exhibits, setExhibits] = useState([]);
@@ -24,16 +23,14 @@ function App() {
   };
 
   
-  
   return (
     <div className="App">
-      <Header />
-      {exhibits?.length ? (
-        <Exhibits exhibits={exhibits} onClick={onExhibitClick}/>
-      ) : (
-        "Loading..."
-      )}
-      {showArts ? <ArtList arts={arts} /> : "Nothing to show"}
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Exhibits exhibits={exhibits} onClick={onExhibitClick}/>} />
+          <Route path="arts" element={<ArtList arts={arts} />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
