@@ -26,16 +26,16 @@ function App() {
   return (
     <div className="App">
       <Header />
-        <Route path="/exhibits">
+        {/* <Route path="/exhibits"> */}
         {exhibits?.length ? (
           <Exhibits exhibits={exhibits} onClick={onExhibitClick}/>
         ) : (
           "Loading..."
         )}
-        </Route>
-        <Route path="/Art">
+        {/* </Route> */}
+        {/* <Route path="/Art"> */}
         {showArts ? <ArtList arts={arts} /> : "Nothing to show"}
-        </Route>
+        {/* </Route> */}
     </div>
   );
 }
