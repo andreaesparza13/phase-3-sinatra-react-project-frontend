@@ -5,6 +5,7 @@ export const ArtList = ({arts}) => {
   if(!arts){
     return <div>Loading...</div>
   }
+  console.log(arts)
   return (
     <div>
       {arts.map(art => (

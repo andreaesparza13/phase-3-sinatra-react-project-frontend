@@ -1,7 +1,7 @@
 import React from 'react';
 import Artist from './Artist';
 
-const Artists = ({ artists }) => {
+const Artists = ({ artists, onClick }) => {
 
    const artist_list = artists.map(artist => (
       <Artist
@@ -10,6 +10,7 @@ const Artists = ({ artists }) => {
          last_name={artist.last_name}
          location={artist.location}
          age={artist.age}
+         onClick={onClick}
          />
       ))
 
