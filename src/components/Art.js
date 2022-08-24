@@ -10,7 +10,7 @@ const Art = ({ title, medium, description, image_url }) => {
                 <li>{description}</li>
                 <br/>
             </ul>
-            <img src={image_url} alt="art photo"/>
+            <img src={image_url} alt={title}/>
         </div>
     )
 }
