@@ -6,11 +6,14 @@ const Header = () => {
       <div className="mr-auto w-32 h-16 bg-stone-500 text-center pt-4 rounded-br-md">
         <span className="font-bold text-lg">Art Exhibits</span>
       </div>
-      <div class="navButton">
+      <div className="navButton">
         All Exhibits
       </div>
-      <div class="navButton">
+      <div className="navButton">
         All Artists
+      </div>
+      <div className="navButton">
+        All Art
       </div>
     </div>
   );
