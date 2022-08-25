@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 const Exhibit = ({exhibit, onClick}) => {
     return (
-      <div className="p-6 m-6 basis-1/5 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700" key={exhibit.id}>
+      <div className="m-6 p-6 basis-1/5 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700" key={exhibit.id}>
          <ul className="m-6">
             <li ><h1 className="mb-2 text-3xl font-semibold tracking-tight text-gray-900 dark:text-white">{exhibit.theme}</h1></li>
             <li ><h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">at {exhibit.name}</h5></li>

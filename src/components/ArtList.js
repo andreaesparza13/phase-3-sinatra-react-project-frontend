@@ -7,7 +7,7 @@ export const ArtList = ({arts}) => {
   }
   // console.log(arts)
   return (
-    <div className="flex flex-row">
+    <div className="flex flex-wrap justify-start">
       {arts.map(art => (
          <Art
             title={art.title}
