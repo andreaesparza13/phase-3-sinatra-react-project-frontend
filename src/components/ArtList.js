@@ -2,8 +2,8 @@ import React from 'react'
 import Art from './Art'
 
 export const ArtList = ({arts}) => {
-  if(!arts){
-    return <div>Loading...</div>
+  if(!arts || arts.length === 0) {
+    return <div>Nothing to display...</div>
   }
   console.log(arts)
   return (
