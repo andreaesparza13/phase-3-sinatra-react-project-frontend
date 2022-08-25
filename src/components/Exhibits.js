@@ -5,7 +5,7 @@ const Exhibits = ({ onClick, exhibits }) => {
    }
 
    return (
-      <div className="flex gap-12">
+      <div className="flex flex-row flex-wrap gap-4 justify-start m-auto justify-items-start">
          {exhibits.map(exhibit => (<Exhibit exhibit={exhibit} onClick={onClick} key={exhibit.id}/>))}
       </div>
    )

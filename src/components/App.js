@@ -7,6 +7,8 @@ import ArtForm from "./ArtForm";
 import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+const baseUrl = "http://localhost:9292/";
+
 function App() {
   const [exhibits, setExhibits] = useState([]);
   const [artists, setArtists] = useState([]);
@@ -15,7 +17,7 @@ function App() {
   const [artistArts, setArtistArts] = useState([]);
   const fetchData = (urlParams = "", setter) => 
   {
-    fetch(`http://localhost:9292/${urlParams}`)
+    fetch(`${baseUrl}${urlParams}`)
     .then(res => res.json())
     .then(data => setter(data))
   }
@@ -24,10 +26,20 @@ function App() {
   const fetchExhibits = () => fetchData("exhibits", setExhibits)
 
   //gets all artists and updates to state
-  const fetchArtists = () => fetchData("artists", setArtists)
+  // const fetchArtists = () => fetchData("artists", setArtists)
+  useEffect(() =>{
+    fetch(`${baseUrl}artists`)
+    .then(res => res.json())
+    .then(data => setArtists(data))
+  }, [])
   
   //gets all artwork and updates to state
-  const fetchArtwork = () => fetchData("art", setArts)
+  // const fetchArtwork = () => fetchData("art", setArts)
+  useEffect(() =>{
+    fetch(`${baseUrl}art`)
+    .then(res => res.json())
+    .then(data => setArts(data))
+  }, [])
 
   //gets data with an id and updates to state
   const onExhibitClick = (event) => fetchData(`exhibits/${event.target.id}/arts`, setExhibitArts)
@@ -41,7 +53,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Header showAllExhibits={fetchExhibits} showAllArtists={fetchArtists} showAllArtwork={fetchArtwork} />
+        <Header showAllExhibits={fetchExhibits} showAllArtists={setArtists} showAllArtwork={setArts} />
         <Routes>
           <Route exact path="/" element={<Exhibits exhibits={exhibits} onClick={onExhibitClick}/>} />
           <Route path="/arts" element={<ArtList arts={exhibitArts} />} />
