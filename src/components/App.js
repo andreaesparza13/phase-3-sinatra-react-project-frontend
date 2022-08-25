@@ -56,10 +56,10 @@ function App() {
         <Header showAllExhibits={fetchExhibits} showAllArtists={setArtists} showAllArtwork={setArts} />
         <Routes>
           <Route exact path="/" element={<Exhibits exhibits={exhibits} onClick={onExhibitClick}/>} />
-          <Route path="/arts" element={<ArtList arts={exhibitArts} />} />
+          <Route path="/arts" element={<ArtList arts={exhibitArts} artists={artists}/>} />
           <Route path="/art" element={<ArtList arts={arts} artists={artists} />} />
           <Route path="/artists" element={<Artists artists={artists} onClick={onArtistClick}/>} />
-          <Route path="/artists/arts" element={<ArtList arts={artistArts} />} />
+          <Route path="/artists/arts" element={<ArtList arts={artistArts} artists={artists}/>} />
           <Route path="/add-art" element={<ArtForm />} />
           <Route path="/add-artist" element={<ArtistForm />} />
         </Routes>
