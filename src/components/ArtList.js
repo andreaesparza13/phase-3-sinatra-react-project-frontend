@@ -5,7 +5,7 @@ export const ArtList = ({arts}) => {
   if(!arts || arts.length === 0) {
     return <div>Nothing to display...</div>
   }
-  console.log(arts)
+  // console.log(arts)
   return (
     <div>
       {arts.map(art => (
