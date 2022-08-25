@@ -23,10 +23,13 @@ function App() {
   }
    
   //gets all exhibits and updates to state
-  const fetchExhibits = () => fetchData("exhibits", setExhibits)
+  useEffect(() => {
+    fetch(`${baseUrl}exhibits`)
+    .then(res => res.json())
+    .then(data => setExhibits(data))
+  })
 
   //gets all artists and updates to state
-  // const fetchArtists = () => fetchData("artists", setArtists)
   useEffect(() =>{
     fetch(`${baseUrl}artists`)
     .then(res => res.json())
@@ -34,7 +37,6 @@ function App() {
   }, [])
   
   //gets all artwork and updates to state
-  // const fetchArtwork = () => fetchData("art", setArts)
   useEffect(() =>{
     fetch(`${baseUrl}art`)
     .then(res => res.json())
@@ -45,15 +47,10 @@ function App() {
   const onExhibitClick = (event) => fetchData(`exhibits/${event.target.id}/arts`, setExhibitArts)
   const onArtistClick = (event) =>  fetchData(`artists/${event.target.id}/arts`, setArtistArts)
   
-
-  useEffect(() => {
-    fetchExhibits()
-  }, []);
-  
   return (
     <div className="App">
       <BrowserRouter>
-        <Header showAllExhibits={fetchExhibits} showAllArtists={setArtists} showAllArtwork={setArts} />
+        <Header showAllExhibits={setExhibits} showAllArtists={setArtists} showAllArtwork={setArts} />
         <Routes>
           <Route exact path="/" element={<Exhibits exhibits={exhibits} onClick={onExhibitClick}/>} />
           <Route path="/arts" element={<ArtList arts={exhibitArts} artists={artists}/>} />

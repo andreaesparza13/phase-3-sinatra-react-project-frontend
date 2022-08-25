@@ -9,9 +9,7 @@ const Art = ({ title, medium, description, image_url, artist }) => {
             <h3 className="text-gray-900 text-2xl font-medium mb-2">{title}</h3>
             <h5 className="text-gray-800 text-lg font-medium mb-2">{artist}</h5>
             <h5 className="text-gray-800 text-lg font-medium mb-2">{medium}</h5>
-            <p className="text-gray-700 text-base mb-4">
-                {description}
-            </p>
+            <p className="text-gray-700 text-base mb-4">{description}</p>
             <Link to="/artists/arts">
             <button type="button" className=" inline-block px-6 py-2.5 bg-white-600 text-gray-900 font-medium text-sm leading-tight uppercase rounded shadow-md hover:bg-gray-100 border border-gray-400 rounded shadow">Explore Artist</button>
             </Link>
