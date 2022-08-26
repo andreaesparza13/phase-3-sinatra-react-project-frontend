@@ -1,6 +1,6 @@
 import Art from './Art'
 
-export const ArtList = ({arts, artists, onArtistClick}) => {
+export const ArtList = ({arts, artists, handleClick}) => {
   if(!arts || arts.length === 0) {
     return <div>Nothing to display...</div>
   }
@@ -16,6 +16,7 @@ export const ArtList = ({arts, artists, onArtistClick}) => {
               artists.find(artist => artist.id === art.artist_id).first_name
             }
             key={art.id}
+            handleClick={handleClick}
          />)
       )}
     </div>
