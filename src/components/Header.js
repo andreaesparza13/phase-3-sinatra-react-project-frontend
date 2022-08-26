@@ -37,8 +37,8 @@ const Header = () => {
       break;
   }
   return (
-    <div className="header flex gap-4 mr-4 w-screen">
-      <div className="mr-auto w-32 h-16 bg-gradient-to-r from-gray-700 to-gray-800 text-center pt-4 rounded-br-md">
+    <div className="header flex gap-4 w-screen">
+      <div className="mr-auto ml-2 mt-2 w-32 h-16 bg-gradient-to-r from-gray-700 to-gray-800 text-center pt-4 rounded rounded-br-md">
         <span className="font-bold text-lg text-white">{title}</span>
       </div>
       <Link to="/" >
