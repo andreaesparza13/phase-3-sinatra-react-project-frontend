@@ -1,22 +1,24 @@
 import React, { useState } from 'react';
 
-const ArtForm = () => {
+const ArtForm = ({renderArt}) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('')
-  const [artist_full_name, setArtistFullName] = useState('')
+  const [first_name, setFirstName] = useState('')
+  const [last_name, setLastName] = useState('')
   const [image_url, setImageUrl] = useState('')
   const [medium, setMedium] = useState('')
   const [exhibit, setExhibit] = useState('')
   
   const handleSubmit = (e) => {
-    e.preventDefault();
-    //post request to server
-    let art = { title: title, medium: medium, description: description, image_url: image_url, artist_full_name: artist_full_name, exhibit: exhibit }
+    e.preventDefault()
+    let art = { title: title, medium: medium, description: description, image_url: image_url, first_name: first_name, last_name: last_name, exhibit: exhibit }
     fetch('http://localhost:9292/art', {
       method: 'POST',
       headers: { contentType: 'application/json' },
       body: JSON.stringify(art)}
       )
+      .then(res => res.json())
+      .then(data => renderArt(data))
   }
   const onChange = (e) => {
     const {name, value} =  e.target
@@ -28,8 +30,11 @@ const ArtForm = () => {
       case 'description':
         setDescription(value);
         break;
-      case 'artist_full_name':
-        setArtistFullName(value);
+      case 'first_name':
+        setFirstName(value);
+        break;
+      case 'last_name':
+        setLastName(value);
         break;
       case 'exhibit':
         setExhibit(value);
@@ -81,11 +86,21 @@ const ArtForm = () => {
       <div className="md:flex md:items-center mb-6">
         <div className="md:w-1/3">
           <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
-            Artist Full Name
+            Artist First Name
           </label>
         </div>
         <div className="md:w-2/3">
-          <input name="artist_full_name" onChange={onChange} value={artist_full_name} className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-age" type="text" />
+          <input name="first_name" onChange={onChange} value={first_name} className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-age" type="text" />
+        </div>
+      </div>
+      <div className="md:flex md:items-center mb-6">
+        <div className="md:w-1/3">
+          <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
+            Artist Last Name
+          </label>
+        </div>
+        <div className="md:w-2/3">
+          <input name="last_name" onChange={onChange} value={last_name} className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-age" type="text" />
         </div>
       </div>
       <div className="md:flex md:items-center mb-6">

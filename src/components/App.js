@@ -43,6 +43,14 @@ function App() {
     .then(data => setArts(data))
   }, [])
 
+  const renderArt = (art) => {
+    setArtists([...arts, art])
+    console.log(`art ${art.title} added`)
+  }
+  const renderArtist = (artist) => {
+    setArtists([...artists, artist])
+    console.log(`artist ${artist.first_name} added`)
+  }
   //gets data with an id and updates to state
   const onExhibitClick = (event) => fetchData(`exhibits/${event.target.id}/arts`, setExhibitArts)
   const onArtistClick = (event) =>  fetchData(`artists/${event.target.id}/arts`, setArtistArts)
@@ -57,8 +65,8 @@ function App() {
           <Route path="/art" element={<ArtList arts={arts} artists={artists} />} />
           <Route path="/artists" element={<Artists artists={artists} onClick={onArtistClick}/>} />
           <Route path="/artists/arts" element={<ArtList arts={artistArts} artists={artists}/>} />
-          <Route path="/add-art" element={<ArtForm />} />
-          <Route path="/add-artist" element={<ArtistForm />} />
+          <Route path="/add-art" element={<ArtForm  renderArt={renderArt}/>} />
+          <Route path="/add-artist" element={<ArtistForm renderArtist={renderArtist}/>} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -5,7 +5,13 @@ const Artists = ({ artists, onClick }) => {
   if (!artists || artists.length === 0) {
     return <div>Nothing to display...</div>
   }
-   const artist_list = artists.map(artist => (
+
+   const artist_list = artists.map(artist => {
+    if(!artist.id)
+    {
+      artist.id = artists.length + 1
+    } return (
+    
       <Artist
          key={artist.id}
          id={artist.id}
@@ -15,7 +21,7 @@ const Artists = ({ artists, onClick }) => {
          age={artist.age}
          onClick={onClick}
          />
-      ))
+      )})
 
   return (
     <div>

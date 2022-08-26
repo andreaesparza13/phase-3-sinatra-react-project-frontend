@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ArtistForm = () => {
+const ArtistForm = ({renderArtist}) => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [age, setAge] = useState(0);
@@ -8,8 +8,6 @@ const ArtistForm = () => {
 
   function handleSubmit(e) {
     e.preventDefault()
-    console.log('Posting: ', firstName, lastName, age, location)
-    //post request to server
     let artist = { first_name: firstName, last_name: lastName, age: age, location: location }
     
     fetch('http://localhost:9292/artists', {
@@ -17,6 +15,8 @@ const ArtistForm = () => {
       headers: { contentType: 'application/json' },
       body: JSON.stringify(artist)
     })
+    .then(res => res.json())
+    .then(data => renderArtist(data))
   }
  
   const onChange = (e) => {
