@@ -132,8 +132,8 @@ const ArtForm = ({renderArt}) => {
         </div>
       </div>
   </form>
-  <div className="w-64 h-64 bg-stone-gray-500">
-      <img className=" border-spacing-x-5" src={displayImage} alt=""/>
+  <div className="min-w-64 min-h-64 w-fit h-fit max-w-screen-sm max-h-screen-sm bg-stone-gray-500 ml-16 mt-16 border-stone-500 border-4 bg-white">
+      <img className="object-cover" src={displayImage ? displayImage : "https://wtwp.com/wp-content/uploads/2015/06/placeholder-image.png"} alt="upload preview"/>
   </div>
   </div>
   )
