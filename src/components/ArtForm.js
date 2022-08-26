@@ -54,7 +54,7 @@ const ArtForm = ({renderArt}) => {
   return (
     <>
     <form onSubmit={handleSubmit} className="w-full max-w-xl items-center">
-      <h1 className="font-medium leading-tight text-5xl mt-0 mb-2 text-black-600">New Art</h1>
+      <h1 className="font-medium leading-tight text-5xl mt-0 mb-2 text-black-600 text-center">New Art</h1>
       <div className="md:flex md:items-center mb-6">
         <div className="md:w-1/3">
           <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
