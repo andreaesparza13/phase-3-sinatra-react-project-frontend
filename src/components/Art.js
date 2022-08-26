@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 const Art = ({ key, title, medium, description, image_url, artist, handleClick }) => {
     return (
-        <div className="rounded-lg shadow-lg bg-white max-w-sm p-6 m-6">
+        <div className="rounded-lg shadow-lg bg-white max-w-sm p-6 m-6 ml-auto mr-auto">
             <img className="rounded-t-lg" src={image_url} alt={title}/>
             <div className="p-6">
             <h3 className="text-gray-900 text-2xl font-medium mb-2">{title}</h3>

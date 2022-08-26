@@ -25,4 +25,7 @@ code {
   .formbuilder-text {
     @apply gap-y-2
   }
+  html {
+    @apply bg-fixed bg-louvre-image bg-no-repeat;
+  }
 }
