@@ -127,7 +127,7 @@ const ArtForm = ({renderArt}) => {
       <div className="md:flex md:items-center">
         <div className="md:w-1/3"></div>
         <div className="md:w-2/3">
-          <input type="submit" value="Submit" className="shadow bg-blue-500 hover:bg-blue-600 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"/>
+          <input type="submit" value="Submit" className="shadow bg-gray-700 hover:bg-gray-800 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"/>
         </div>
       </div>
   </form>
