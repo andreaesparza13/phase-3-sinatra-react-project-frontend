@@ -19,6 +19,7 @@ const Artists = ({ artists, onClick }) => {
          last_name={artist.last_name}
          location={artist.location}
          age={artist.age}
+         image_url={artist.image_url}
          onClick={onClick}
          />
       )})
