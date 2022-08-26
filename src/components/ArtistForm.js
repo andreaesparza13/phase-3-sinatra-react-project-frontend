@@ -40,7 +40,7 @@ const ArtistForm = ({renderArtist}) => {
   }
   return (
 
-    <form className="w-full max-w-xl ml-auto mr-auto" onSubmit={handleSubmit}>
+    <form className="w-full max-w-xl ml-auto mr-auto bg-white p-6 rounded shadow focus:shadow-outline" onSubmit={handleSubmit}>
       <h1 className="font-medium leading-tight text-5xl mt-0 mb-2 text-black-600 ml-4 text-center">New Artist</h1>
       <div className="md:flex md:items-center mb-6">
         <div className="md:w-1/3">
@@ -85,7 +85,7 @@ const ArtistForm = ({renderArtist}) => {
       <div className="md:flex md:items-center">
         <div className="md:w-1/3"></div>
         <div className="md:w-2/3">
-          <input type="submit" value="Submit" className="shadow bg-blue-500 hover:bg-blue-600 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"/>
+          <input type="submit" value="Submit" className="shadow bg-gray-700 hover:bg-gray-800 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"/>
         </div>
       </div>
   </form>

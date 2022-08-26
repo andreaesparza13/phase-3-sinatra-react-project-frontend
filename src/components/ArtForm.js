@@ -53,7 +53,7 @@ const ArtForm = ({renderArt}) => {
 
   return (
     <div className="flex w-screen">
-    <form onSubmit={handleSubmit} className="w-full max-w-xl ml-auto">
+    <form onSubmit={handleSubmit} className="w-full max-w-xl ml-auto bg-white p-6 rounded shadow focus:shadow-outline">
       <h1 className="font-medium leading-tight text-5xl mt-0 mb-2 text-black-600 text-center">New Art</h1>
       <div className="md:flex md:items-center mb-6">
         <div className="md:w-1/3">
