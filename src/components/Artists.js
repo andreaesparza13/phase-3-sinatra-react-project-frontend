@@ -24,7 +24,7 @@ const Artists = ({ artists, onClick }) => {
       )})
 
   return (
-    <div>
+    <div  className="flex flex-wrap justify-start">
       {artist_list}
     </div>
   )
