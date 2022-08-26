@@ -9,11 +9,10 @@ const Exhibit = ({exhibit, onClick}) => {
             <li ><h5 className="mb-2 text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">at {exhibit.name}</h5></li>
             <li><p className="mb-3 font-normal text-gray-500 dark:text-gray-400">{exhibit.location}</p></li>
          </ul>
-         <div className="ml-5 text-blue-600">
-            <Link to="/arts">
-               <button className="hover:underline text-align-center" onClick={onClick} id={exhibit.id}>Explore Exhibit</button>
-            </Link>
-         </div>
+         <br />
+         <Link to="/arts">
+            <span role="button"className="ml-6 text-blue-600 hover:underline text-align-center" id={exhibit.id}>Explore Exhibit</span>
+         </Link>
       </div>
     )
 }
