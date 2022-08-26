@@ -40,7 +40,7 @@ const ArtistForm = ({renderArtist}) => {
   }
   return (
 
-    <form className="w-full max-w-xl items-center" onSubmit={handleSubmit}>
+    <form className="w-full max-w-xl ml-auto mr-auto" onSubmit={handleSubmit}>
       <h1 className="font-medium leading-tight text-5xl mt-0 mb-2 text-black-600 ml-4 text-center">New Artist</h1>
       <div className="md:flex md:items-center mb-6">
         <div className="md:w-1/3">
@@ -79,7 +79,7 @@ const ArtistForm = ({renderArtist}) => {
           </label>
         </div>
         <div className="md:w-2/3">
-          <input name="age" onChange={onChange} className="input-form" id="inline-age" type="number" />
+          <input name="age" onChange={onChange} className="input-form" id="inline-age" type="number"/>
         </div>
       </div>
       <div className="md:flex md:items-center">

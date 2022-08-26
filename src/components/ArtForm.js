@@ -52,7 +52,8 @@ const ArtForm = ({renderArt}) => {
 }
 
   return (
-    <div className="flex justify-start content-center">
+    <div className="flex w-screen">
+      <div className='justify-self w-screen'>
     <form onSubmit={handleSubmit} className="w-full max-w-xl">
       <h1 className="font-medium leading-tight text-5xl mt-0 mb-2 text-black-600 text-center">New Art</h1>
       <div className="md:flex md:items-center mb-6">
@@ -132,8 +133,9 @@ const ArtForm = ({renderArt}) => {
         </div>
       </div>
   </form>
-  <div className="min-w-64 min-h-64 w-fit h-fit max-w-screen-sm max-h-screen-sm bg-stone-gray-500 ml-16 mt-16 border-stone-500 border-4 bg-white">
+  <div className="m w-fit max-w-xl in-w-64 min-h-64 h-fit max-h-screen-sm bg-stone-gray-500 ml-16 mt-16 border-stone-500 border-4 bg-white">
       <img className="object-cover" src={displayImage ? displayImage : "https://wtwp.com/wp-content/uploads/2015/06/placeholder-image.png"} alt="upload preview"/>
+  </div>
   </div>
   </div>
   )
