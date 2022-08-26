@@ -52,8 +52,8 @@ const ArtForm = ({renderArt}) => {
 }
 
   return (
-    <>
-    <form onSubmit={handleSubmit} className="w-full max-w-xl items-center">
+    <div className="flex justify-start content-center">
+    <form onSubmit={handleSubmit} className="w-full max-w-xl">
       <h1 className="font-medium leading-tight text-5xl mt-0 mb-2 text-black-600 text-center">New Art</h1>
       <div className="md:flex md:items-center mb-6">
         <div className="md:w-1/3">
@@ -132,10 +132,10 @@ const ArtForm = ({renderArt}) => {
         </div>
       </div>
   </form>
-  <div className=" w-64 h-64 bg-stone-gray-500">
+  <div className="w-64 h-64 bg-stone-gray-500">
       <img className=" border-spacing-x-5" src={displayImage} alt=""/>
   </div>
-  </>
+  </div>
   )
 }
 

@@ -12,7 +12,7 @@ const Artist = ({ id, first_name, last_name, age, location, onClick }) => {
             <li className="mb-3 font-normal text-gray-500 dark:text-gray-400">{location}</li>
             <br/>
             <Link to="/artists/arts" onClick={onClick}>
-               <a role="button"class="ml-5 text-blue-600"id={id}>Click to view Art</a>
+               <span role="button"class="ml-5 text-blue-600" id={id}>Click to view Art</span>
             </Link>
          </ul>
       </div>
