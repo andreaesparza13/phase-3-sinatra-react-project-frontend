@@ -15,7 +15,7 @@ function App() {
   const [arts, setArts] = useState([]);
   const [exhibitArts, setExhibitArts] = useState([]);
   const [artistArts, setArtistArts] = useState([]);
-  
+
   const fetchData = (urlParams = "", setter) => 
   {
     fetch(`${baseUrl}${urlParams}`)
@@ -52,6 +52,7 @@ function App() {
     setArtists([...artists, artist])
     console.log(`artist ${artist.first_name} added`)
   }
+  
   //gets data with an id and updates to state
   const onExhibitClick = (event) => fetchData(`exhibits/${event.target.id}/arts`, setExhibitArts)
   const onArtistClick = (event) =>  fetchData(`artists/${event.target.id}/arts`, setArtistArts)
@@ -63,7 +64,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Exhibits exhibits={exhibits} onClick={onExhibitClick}/>} />
           <Route path="/arts" element={<ArtList arts={exhibitArts} artists={artists}/>} />
-          <Route path="/art" element={<ArtList arts={arts} artists={artists} />} />
+          <Route path="/art" element={<ArtList arts={arts} artists={artists} handleClick={onArtistClick}/>} />
           <Route path="/artists" element={<Artists artists={artists} onClick={onArtistClick}/>} />
           <Route path="/artists/arts" element={<ArtList arts={artistArts} artists={artists}/>} />
           <Route path="/add-art" element={<ArtForm  renderArt={renderArt}/>} />

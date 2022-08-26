@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import Art from './Art'
 
-export const ArtList = ({arts, artists}) => {
+export const ArtList = ({arts, artists, handleClick}) => {
+  console.log(arts)
   if(!arts || arts.length === 0) {
     return <div>Nothing to display...</div>
   }
@@ -17,6 +18,7 @@ export const ArtList = ({arts, artists}) => {
               artists.find(artist => artist.id === art.artist_id).first_name
             }
             key={art.id}
+            handleClick={handleClick}
          />)
       )}
     </div>
