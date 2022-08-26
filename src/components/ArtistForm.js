@@ -7,9 +7,7 @@ const ArtistForm = ({renderArtist}) => {
   const [location, setLocation] = useState('');
 
   function handleSubmit(e) {
-    e.preventDefault()
     let artist = { first_name: firstName, last_name: lastName, age: age, location: location }
-    
     fetch('http://localhost:9292/artists', {
       method: 'POST',
       headers: { contentType: 'application/json' },
