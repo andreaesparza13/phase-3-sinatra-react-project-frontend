@@ -11,7 +11,7 @@ const Exhibit = ({exhibit, onClick}) => {
          </ul>
          <br />
          <Link to="/arts">
-            <span role="button"className="ml-6 text-blue-600 hover:underline text-align-center" id={exhibit.id}>Explore Exhibit</span>
+            <span role="button" onClick={onClick} className="ml-6 text-blue-600 hover:underline text-align-center" id={exhibit.id}>Explore Exhibit</span>
          </Link>
       </div>
     )

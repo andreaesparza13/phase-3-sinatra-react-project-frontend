@@ -1,11 +1,15 @@
 import Art from './Art'
-
+import LoadingIcons from 'react-loading-icons'
 export const ArtList = ({arts, artists, handleClick}) => {
-  if(!arts || arts.length === 0) {
+  
+  if(!arts) {
+    return <LoadingIcons.Bars className="ml-auto mr-auto"/>
+  }
+  if(arts.length === 0) {
     return <div>Nothing to display...</div>
   }
   return (
-    <div className="flex flex-wrap justify-center ">
+    <div className="flex flex-wrap justify-center">
       {arts.map(art => (
          <Art
             title={art.title}
