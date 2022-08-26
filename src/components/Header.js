@@ -6,7 +6,7 @@ const Header = () => {
   let title = ""
   switch(location.pathname) {
     case "/":
-      title = "Home"
+      title = "Exhibits"
       break;
     case "/art":
       title = "Arts"
@@ -17,8 +17,8 @@ const Header = () => {
     case "/artists":
       title = "Artists"
       break;
-    case "/exhibits":
-      title = "Exhibits"
+    case "/artists/arts":
+      title = "Artist art"
       break;
     case "/add-artist":
       title = "Add Artist"
@@ -35,7 +35,6 @@ const Header = () => {
       default:
       title = "Home"
       break;
-
   }
   return (
     <div className="header flex gap-4 mr-4 w-screen">
