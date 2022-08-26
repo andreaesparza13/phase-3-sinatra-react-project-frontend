@@ -5,7 +5,7 @@ export const ArtList = ({arts, artists, handleClick}) => {
     return <div>Nothing to display...</div>
   }
   return (
-    <div className="flex flex-wrap justify-center">
+    <div className="flex flex-wrap justify-center ">
       {arts.map(art => (
          <Art
             title={art.title}
