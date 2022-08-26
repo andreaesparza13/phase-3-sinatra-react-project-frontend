@@ -62,7 +62,7 @@ const ArtForm = ({ renderArt }) => {
     <div className="flex w-screen">
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-xl ml-auto bg-white p-6 rounded shadow focus:shadow-outline"
+        className="w-full max-w-xl ml-auto bg-black/50 p-6 rounded shadow focus:shadow-outline"
       >
         <h1 className="font-medium leading-tight text-5xl mt-0 mb-2 text-black-600 text-center">
           New Art

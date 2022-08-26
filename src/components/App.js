@@ -22,25 +22,10 @@ function App() {
       .then((data) => setter(data));
   };
 
-  //gets all exhibits and updates to state
   useEffect(() => {
-    fetch(`${baseUrl}exhibits`)
-      .then((res) => res.json())
-      .then((data) => setExhibits(data));
-  }, []);
-
-  //gets all artists and updates to state
-  useEffect(() => {
-    fetch(`${baseUrl}artists`)
-      .then((res) => res.json())
-      .then((data) => setArtists(data));
-  }, []);
-
-  //gets all artwork and updates to state
-  useEffect(() => {
-    fetch(`${baseUrl}art`)
-      .then((res) => res.json())
-      .then((data) => setArts(data));
+    fetchData("exhibits", setExhibits);
+    fetchData("artists", setArtists);
+    fetchData("art", setArts);
   }, []);
 
   const renderArt = (art) => {
