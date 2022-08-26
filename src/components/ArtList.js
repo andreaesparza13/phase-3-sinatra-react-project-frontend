@@ -5,7 +5,7 @@ export const ArtList = ({arts, artists, handleClick}) => {
     return <div>Nothing to display...</div>
   }
   return (
-    <div className="flex flex-wrap justify-start">
+    <div className="flex flex-wrap justify-center">
       {arts.map(art => (
          <Art
             title={art.title}
@@ -16,6 +16,7 @@ export const ArtList = ({arts, artists, handleClick}) => {
               artists.find(artist => artist.id === art.artist_id).first_name
             }
             key={art.id}
+            id={art.id}
             handleClick={handleClick}
          />)
       )}
