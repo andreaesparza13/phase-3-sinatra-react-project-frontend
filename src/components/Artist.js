@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 const Artist = ({ id, first_name, last_name, age, location, onClick }) => {
    return (
-      <div className="m-6 p-6 basis-1/5 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+      <div className="flex-row h-418px w-fit m-6 ml-8 p-6 basis-1/5 content-start bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
          <ul className="m-6">
             
             <li className="mb-2 text-3xl font-semibold tracking-tight text-gray-900 dark:text-white">{first_name} {last_name}</li>
