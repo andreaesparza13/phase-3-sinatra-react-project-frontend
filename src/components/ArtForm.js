@@ -8,7 +8,7 @@ const ArtForm = ({renderArt}) => {
   const [image_url, setImageUrl] = useState('')
   const [medium, setMedium] = useState('')
   const [exhibit, setExhibit] = useState('')
-  
+  const [displayImage, setDisplayImage] = useState("")
   const handleSubmit = (e) => {
     e.preventDefault()
     let art = { title: title, medium: medium, description: description, image_url: image_url, first_name: first_name, last_name: last_name, exhibit: exhibit }
@@ -41,6 +41,7 @@ const ArtForm = ({renderArt}) => {
         break;
       case 'image_url':
         setImageUrl(value);
+        setDisplayImage(value);
         break;
       case 'medium':
         setMedium(value);
@@ -51,6 +52,7 @@ const ArtForm = ({renderArt}) => {
 }
 
   return (
+    <>
     <form onSubmit={handleSubmit} className="w-full max-w-xl items-center">
       <h1 className="font-medium leading-tight text-5xl mt-0 mb-2 text-black-600">New Art</h1>
       <div className="md:flex md:items-center mb-6">
@@ -130,6 +132,10 @@ const ArtForm = ({renderArt}) => {
         </div>
       </div>
   </form>
+  <div className=" w-64 h-64 bg-stone-gray-500">
+      <img className=" border-spacing-x-5" src={displayImage} alt=""/>
+  </div>
+  </>
   )
 }
 

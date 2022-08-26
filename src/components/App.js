@@ -15,6 +15,7 @@ function App() {
   const [arts, setArts] = useState([]);
   const [exhibitArts, setExhibitArts] = useState([]);
   const [artistArts, setArtistArts] = useState([]);
+  
   const fetchData = (urlParams = "", setter) => 
   {
     fetch(`${baseUrl}${urlParams}`)
