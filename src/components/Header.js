@@ -62,7 +62,7 @@ const Header = () => {
       </div>
       </Link>
       <Link to="/add-art">
-      <div className="navButton">
+      <div className="navButton mr-2">
         Submit Art
       </div>
       </Link>
