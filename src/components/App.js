@@ -27,7 +27,7 @@ function App() {
     fetch(`${baseUrl}exhibits`)
     .then(res => res.json())
     .then(data => setExhibits(data))
-  })
+  },[])
 
   //gets all artists and updates to state
   useEffect(() =>{

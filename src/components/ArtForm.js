@@ -11,7 +11,7 @@ const ArtForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     //post request to server
-    let art = { title: title, medium: medium, description: description, image_url: image_url }
+    let art = { title: title, medium: medium, description: description, image_url: image_url, artist_full_name: artist_full_name, exhibit: exhibit }
     fetch('http://localhost:9292/art', {
       method: 'POST',
       headers: { contentType: 'application/json' },
