@@ -10,7 +10,6 @@ const ArtForm = ({renderArt}) => {
   const [exhibit, setExhibit] = useState('')
   const [displayImage, setDisplayImage] = useState("")
   const handleSubmit = (e) => {
-    e.preventDefault()
     let art = { title: title, medium: medium, description: description, image_url: image_url, first_name: first_name, last_name: last_name, exhibit: exhibit }
     fetch('http://localhost:9292/art', {
       method: 'POST',
