@@ -1,8 +1,6 @@
-import React, { useEffect } from 'react'
 import Art from './Art'
 
 export const ArtList = ({arts, artists, handleClick}) => {
-  console.log(arts)
   if(!arts || arts.length === 0) {
     return <div>Nothing to display...</div>
   }
