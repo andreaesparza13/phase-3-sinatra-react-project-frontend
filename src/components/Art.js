@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-const Art = ({ key, title, medium, description, image_url, artist, handleClick }) => {
+const Art = ({id, title, medium, description, image_url, artist, handleClick }) => {
     return (
         <div className="rounded-lg shadow-lg bg-white max-w-sm p-6 m-6 ml-auto mr-auto">
             <img className="rounded-t-lg" src={image_url} alt={title}/>
@@ -11,7 +11,7 @@ const Art = ({ key, title, medium, description, image_url, artist, handleClick }
             <p className="text-gray-700 text-base mb-4">{description}</p>
             <br />
             <Link to="/artists/arts">
-            <button id={key} onClick={handleClick} type="button" className="inline-block px-6 py-2.5 bg-white-600 text-gray-900 font-medium text-sm leading-tight uppercase">Explore Artist</button>
+            <button id={id} onClick={handleClick} type="button" className="inline-block px-6 py-2.5 bg-white-600 text-gray-900 font-medium text-sm leading-tight uppercase">Explore Artist</button>
             </Link>
             </div>
         </div>

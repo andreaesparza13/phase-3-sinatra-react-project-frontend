@@ -16,6 +16,7 @@ export const ArtList = ({arts, artists, handleClick}) => {
               artists.find(artist => artist.id === art.artist_id).first_name
             }
             key={art.id}
+            id={art.id}
             handleClick={handleClick}
          />)
       )}

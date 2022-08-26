@@ -44,42 +44,42 @@ const ArtistForm = ({renderArtist}) => {
       <h1 className="font-medium leading-tight text-5xl mt-0 mb-2 text-black-600 ml-4 text-center">New Artist</h1>
       <div className="md:flex md:items-center mb-6">
         <div className="md:w-1/3">
-          <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
+          <label className="input-label">
             First Name
           </label>
         </div>
         <div className="md:w-2/3">
-          <input name="firstName" onChange={onChange} className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-first-name" type="text" />
+          <input name="firstName" onChange={onChange} className="input-form" id="inline-first-name" type="text" />
         </div>
       </div>
       <div className="md:flex md:items-center mb-6">
         <div className="md:w-1/3">
-          <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
+          <label className="input-label">
             Last Name
           </label>
         </div>
         <div className="md:w-2/3">
-          <input name="lastName" onChange={onChange} className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-last-name" type="text" />
+          <input name="lastName" onChange={onChange} className="input-form" id="inline-last-name" type="text" />
         </div>
       </div>
       <div className="md:flex md:items-center mb-6">
         <div className="md:w-1/3">
-          <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
+          <label className="input-label">
             City
           </label>
         </div>
         <div className="md:w-2/3">
-          <input name="location" onChange={onChange} className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-location" type="text" />
+          <input name="location" onChange={onChange} className="input-form" id="inline-location" type="text" />
         </div>
       </div>
       <div className="md:flex md:items-center mb-6">
         <div className="md:w-1/3">
-          <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
+          <label className="input-label">
             Age
           </label>
         </div>
         <div className="md:w-2/3">
-          <input name="age" onChange={onChange} className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-age" type="number" />
+          <input name="age" onChange={onChange} className="input-form" id="inline-age" type="number" />
         </div>
       </div>
       <div className="md:flex md:items-center">

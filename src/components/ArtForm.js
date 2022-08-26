@@ -57,72 +57,72 @@ const ArtForm = ({renderArt}) => {
       <h1 className="font-medium leading-tight text-5xl mt-0 mb-2 text-black-600 text-center">New Art</h1>
       <div className="md:flex md:items-center mb-6">
         <div className="md:w-1/3">
-          <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
+          <label className="input-label">
             Title
           </label>
         </div>
         <div className="md:w-2/3">
-          <input name="title" onChange={onChange} value={title} className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-first-name" type="text" />
+          <input name="title" onChange={onChange} value={title} className="input-form" id="inline-first-name" type="text" />
         </div>
       </div>
       <div className="md:flex md:items-center mb-6">
         <div className="md:w-1/3">
-          <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
+          <label className="input-label">
             Description
           </label>
         </div>
         <div className="md:w-2/3">
-          <input name="description" onChange={onChange} value={description} className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-last-name" type="text" />
+          <input name="description" onChange={onChange} value={description} className="input-form" id="inline-last-name" type="text" />
         </div>
       </div>
       <div className="md:flex md:items-center mb-6">
         <div className="md:w-1/3">
-          <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
+          <label className="input-label">
             Image URL
           </label>
         </div>
         <div className="md:w-2/3">
-          <input name="image_url" onChange={onChange} value={image_url} className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-location" type="text" />
+          <input name="image_url" onChange={onChange} value={image_url} className="input-form" id="inline-location" type="text" />
         </div>
       </div>
       <div className="md:flex md:items-center mb-6">
         <div className="md:w-1/3">
-          <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
+          <label className="input-label">
             Artist First Name
           </label>
         </div>
         <div className="md:w-2/3">
-          <input name="first_name" onChange={onChange} value={first_name} className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-age" type="text" />
+          <input name="first_name" onChange={onChange} value={first_name} className="input-form" id="inline-age" type="text" />
         </div>
       </div>
       <div className="md:flex md:items-center mb-6">
         <div className="md:w-1/3">
-          <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
+          <label className="input-label">
             Artist Last Name
           </label>
         </div>
         <div className="md:w-2/3">
-          <input name="last_name" onChange={onChange} value={last_name} className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-age" type="text" />
+          <input name="last_name" onChange={onChange} value={last_name} className="input-form" id="inline-age" type="text" />
         </div>
       </div>
       <div className="md:flex md:items-center mb-6">
         <div className="md:w-1/3">
-          <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
+          <label className="input-label">
             Medium
           </label>
         </div>
         <div className="md:w-2/3">
-          <input name="medium" onChange={onChange} value={medium} className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-age" type="text" />
+          <input name="medium" onChange={onChange} value={medium} className="input-form" id="inline-age" type="text" />
         </div>
       </div>
       <div className="md:flex md:items-center mb-6">
         <div className="md:w-1/3">
-          <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4">
+          <label className="input-label">
             Exhibit
           </label>
         </div>
         <div className="md:w-2/3">
-          <input name="exhibit" onChange={onChange} value={exhibit} className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500" id="inline-age" type="text" />
+          <input name="exhibit" onChange={onChange} value={exhibit} className="input-form" id="inline-age" type="text" />
         </div>
       </div>
       <div className="md:flex md:items-center">
