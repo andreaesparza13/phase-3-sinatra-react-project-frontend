@@ -19,7 +19,7 @@ const ArtForm = ({ renderArt }) => {
       last_name: last_name,
       exhibit: exhibit,
     };
-    fetch("http://localhost:9292/art", {
+    fetch("https://phase-3-art-gallery.herokuapp.com/art", {
       method: "POST",
       headers: { contentType: "application/json" },
       body: JSON.stringify(art),

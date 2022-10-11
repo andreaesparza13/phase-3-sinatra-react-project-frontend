@@ -7,7 +7,7 @@ import ArtForm from "./ArtForm";
 import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-const baseUrl = "http://localhost:9292/";
+const baseUrl = "https://phase-3-art-gallery.herokuapp.com/";
 
 function App() {
   const [exhibits, setExhibits] = useState([]);

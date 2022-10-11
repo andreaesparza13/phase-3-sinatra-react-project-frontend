@@ -13,7 +13,7 @@ const ArtistForm = ({ renderArtist }) => {
       age: age,
       location: location,
     };
-    fetch("http://localhost:9292/artists", {
+    fetch("https://phase-3-art-gallery.herokuapp.com/artists", {
       method: "POST",
       headers: { contentType: "application/json" },
       body: JSON.stringify(artist),
